@@ -1,6 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <header>CS347 Blog</header>
+<header>CS347 Blog</header>
 
-    
+<body>
+    <h1>Blog post for September 10th, 2021</h1>
+
+    <p>This week we started learning about CSS and the basic styling tools we can use to have PRETTY text on our
+        webpages.
+        Which is why I did a simple google search for “cool simple things to do in HTML with CSS” you can look at the
+        website <a href-"https://www.freelancer.com/articles/web-development/css-tips-and-tricks">here.</a>
+
+        The article does go into some crazy advanced (or seem very advanced to me right now) with a ::before and ::after
+        attributes in CSS which can give you the ability to add tooltips and other cool effects on text like the
+        typewriter
+        effect. They also had two points about some helpful formatting for images and other divs with the calc()
+        function
+        and position fixing. They also have section on attr() field in CSS but I am still confused on what exactly it
+        does
+        after reading there example page.
+    </p>
+
+    <p>This is the CSS code <a href-"https://css-tricks.com/snippets/css/typewriter-effect/">they</a> use to get the
+        typewriter effect.</p>
+    <pre>
+        <code class="language-CSS">
+        .typewriter h1 {
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation: 
+              typing 3.5s steps(40, end),
+              blink-caret .75s step-end infinite;
+          }
+          
+          /* The typing effect */
+          @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+          }
+          
+          /* The typewriter cursor effect */
+          @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+          }
+        </code>
+    </pre>
+</body>
+
 </html>
