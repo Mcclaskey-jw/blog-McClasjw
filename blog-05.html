@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="blog-05.css">
 <header>CS347 Blog</header>
 
 <body>
-    <h1>Blog post for October 14th, 2021</h1>
+    <h1>Blog post for October 7th, 2021</h1>
 
-    <p>This week I read about BOM or browser object model, though the W3 school site. BOM is all about using javascript
-        to edit or manipulate the bowser screen. They have seven pages talking about the window, screen, location,
-        history, navigator, popup alert, timing, and cookies. The pages I am talking about can be accessed<a
-            href="https://www.w3schools.com/js/js_window.asp">here.</a></p>
+    <p>This week I just learned about JavaScript and wanted to learn more or at least get a better understanding of the language. 
+        I chose an article from the W3 school talking about the JavaScript basics. The link to the website I used can be accessed<a
+            href="https://www.w3schools.com/js/js_examples.asp">here.</a></p>
     <p>
-        The screen page talks about methods that you can use to open, close, move, and resize the current window, they
-        also show examples of how you can get the current size of the window. The screen site discusses the width,
-        height, avail width, avail height, color depth, and pixel depth. The avail height and depth are functions that
-        return the users screen dimensions. The location page is about getting information about the location of the
-        current site. The history page shows you how to get/force the previous and next web page. The Navigator page
-        lets you show you if the cookies are enabled and what type of web browser the user is using. The popup and
-        timing page shows us how to send alerts to the screen. The cookies page is all about getting and deleting
-        cookies, as well as creating them.
+        The article contains many different links to simple concepts you can do in JavaScript. 
+        The first section on the page links to pages talking about how to change and access differnt elements in HTML and CSS. 
+        The next section is about creating simple JavaScript function that let change or manipulate content on the screen.
+        The final section I reviewed was about how to send an output to the console using JavaScript. 
     </p>
 
-    <p>Below is the sample code to set a cookie:</p>
+    <p>Below is the sample code to send information to the console:</p>
     <pre>
-        <code class="language-CSS">
-            function setCookie(cname, cvalue, exdays) {
-                const d = new Date();
-                d.setTime(d.getTime() + (exdays*24*60*60*1000));
-                let expires = "expires="+ d.toUTCString();
-                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-              }
+        <code class="JavaScript">
+            console.log("Hello World");
         </code>
     </pre>
 </body>
