@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="blog-05.css">
+<header>CS347 Blog</header>
+
+<body>
+    <h1>Blog post for October 7th, 2021</h1>
+
+    <p>This week I as we are starting our section on react I wanted to do some additional reading on some of the basics
+        of reacts.
+        I chose an article from the W3 school talking about react basics such as conditional variables and forms.
+        The link to the website I used can be accessed <a
+            href="https://www.w3schools.com/REACT/react_conditional_rendering.asp">here</a> and
+        <a href="https://www.w3schools.com/REACT/react_forms.asp">here</a>.
+    </p>
+    <p>
+        The article shows a few different ways you can use conditionals in your react function.
+        The first shown is a simple example where you pass the condition true or false as a prop to the function and do
+        simple JavaScript conditionals to update appropriatly.
+        The second and more interesting to me personally is the adding of a logical operator in the example it was &&.
+        I found it interesting that you can logically compare a string which I assume is just always true.
+        The article never discusses the OR (||) logical operator, but I assume it is not useful or just redundant.
+    </p>
+    <p>
+        The second article about forms I wanted to read as well because it will be helpful for my Porject 3.
+        The article showed me how to properly get and store the value of any inputed text and save it into an array.
+        I also found it extremly helpful how they expplained what useState was and how to properly use the function
+        call.
+        I also liked there example where they did some error handling by using the conditional OR variable (guess it is
+        important).
+    </p>
+
+    <p>Below is the sample of code from the forms article:</p>
+    <pre>
+        <code class="JavaScript">
+            import { useState } from "react";
+            import ReactDOM from "react-dom";
+
+            function MyForm() {
+                const [inputs, setInputs] = useState({});
+
+                const handleChange = (event) => {
+                const name = event.target.name;
+                const value = event.target.value;
+                setInputs(values => ({...values, [name]: value}))
+                        }
+
+            const handleSubmit = (event) => {
+                event.preventDefault();
+                alert(inputs);
+            }
+
+            return (
+            </code>
+            <code class="html">
+            <form onSubmit={handleSubmit}>
+                <label>Enter your name:
+                    <input 
+                        type="text" 
+                        name="username" 
+                        value={inputs.username || ""} 
+                        onChange={handleChange}
+                />
+                </label>
+                <label>Enter your age:
+                    <input 
+                        type="number" 
+                        name="age" 
+                        value={inputs.age || ""} 
+                        onChange={handleChange}
+                    />
+                </label>
+                <input type="submit" />
+            </form>
+        </code>
+        <code class = "JavaScript">
+            )
+            }
+
+            ReactDOM.render(<MyForm />, document.getElementById('root'));
+        </code>
+    </pre>
+</body>
+
+</html>
