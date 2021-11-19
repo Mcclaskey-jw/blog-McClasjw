@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="blog-05.css">
+<header>CS347 Blog</header>
+
+<body>
+    <h1>Blog post for November 11th, 2021</h1>
+
+    <p>This week I as we are still working with react but going pushing on to our project 3 where we will take our project 2 endpoints and use them in react to build a front end.
+        So this week unlike most weeks I changed things up and found an new article not from the W3school that discusses using endpoints in react.
+        The link to the website I used can be accessed 
+        <a href="https://jasonwatmore.com/post/2017/12/07/react-redux-jwt-authentication-tutorial-example">here</a>.
+    </p>
+    <p>
+        The article I found by a guy called Markus Claus wrote a very indepth article about how to use my already existing endpoints and implement them with react.
+        The article dicusses a lot of helpful details such as thunks, reducers, and actions. He does a good job explaining how we create these action functions in our actions.js
+        which are then called by our reducer.js by the switch case on the different types of actions, sadly he very quickly glosses over how selkectors are used in this senario.
+        Finally, he shows his new redux program that actually goes to the endpoint and retrieves the requested information and returns the information into the actions.js feilds to 
+        then be processed. Sadly, his render is very different from what I have seen from my readings and it makes very little sense to me.
+    </p>
+
+    <p>Below is the sample of code from the forms article accessing the endpoint:</p>
+    <pre>
+        <code class="JavaScript">
+    import {fetchProductsPending, fetchProductsSuccess, fetchProductsError} from 'actions';
+
+    function fetchProducts() {
+        return dispatch => {
+            dispatch(fetchProductsPending());
+            fetch('https://exampleapi.com/products')
+            .then(res => res.json())
+            .then(res => {
+                if(res.error) {
+                    throw(res.error);
+                }
+                dispatch(fetchProductsSuccess(res.products);
+                return res.products;
+            })
+            .catch(error => {
+                dispatch(fetchProductsError(error));
+            })
+        }
+    }
+
+    export default fetchProducts;
+        </code>
+    </pre>
+</body>
+
+</html>
